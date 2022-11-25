@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element War</title>
+    <script src="./js/ElementWar.js"></script>
+</head>
+<body>
+    <h1> Element War 🔥 💧 🌳 </h1>
+
+    <section id="Pet_selection">
+        <h2>Choose your Monster</h2>
+        
+        <label for="Taquito">Taquito</label>
+        <input type="radio" id="Taquito" name="monster"/>
+        <label for="Chesquito">Chesquito</label>
+        <input type="radio" id="Chesquito" name="monster"/>
+        <label for="Barbacha">Barbacha</label>
+        <input type="radio" id="Barbacha" name="monster"/>
+        <label for="Vampirin">Vampirin</label>
+        <input type="radio" id="Vampirin" name="monster"/>
+        <label for="Garguis">Garguis</label>
+        <input type="radio" id="Garguis" name="monster"/>
+        <label for="Esquitin">Esquitin</label>
+        <input type="radio" id="Esquitin" name="monster"/>        
+        <br>
+        <br>
+        <button id="Monster-button">Select</button>
+    </section>
+
+    <section id="Attack_selection">     <h2>Choose your Attack</h2>
+        <p>Your Monter <span id="monster-player"></span> has <span>3</span> lives</p>
+        <p>Your opponent's Monster <span id="monster-opponent"></span> has <span>3</span> lives</p>
+        <p>
+            <button id="Fire-button">Fire 🔥</button>
+            <button id="Water-button">Water 💧</button>
+            <button id="Earth-button">Earth 🌳</button>
+        </p>
+    </section>
+
+    <section id="Message">
+        <p>Your Monster made an Earth attack</p>
+    </section>
+    <secction id="Restart">
+        <button id="Restart-button">Restart</button>
+    </secction>
+</body>
+</html>
