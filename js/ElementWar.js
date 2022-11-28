@@ -1,5 +1,6 @@
 let playerAttack
 let enemyAttack
+let resultado
 
 function playStart(){
     let buttonMonster = document.getElementById('Monster-button')
@@ -37,6 +38,30 @@ function enemyAttackAlea(){
     }else{
         enemyAttack = 'Earth'
     } 
+    combat()
+    createMessage()
+}
+
+function combat(){    
+    if (enemyAttack == playerAttack) {
+        resultado = ("Draw")
+    }else if (playerAttack == 'Fire' && enemyAttack == 'Earth'){
+        resultado = ("You're win!")
+    }else if (playerAttack == 'Water' && enemyAttack == 'Fire'){
+        resultado = ("You're lose")        
+    }else if (playerAttack == 'Earth' && enemyAttack == 'Water'){
+        resultado = ("You're Win")
+    } else{
+        resultado = ("You're lose")
+    }    
+}
+
+function createMessage(){
+    let sectionMessages = document.getElementById('Message')
+    let paragraph = document.createElement('p')
+    paragraph.innerHTML = 'Your Monster attacked with ' + playerAttack  + ' The enemy Monster  attacked with ' + enemyAttack + '-' + resultado
+
+    sectionMessages.appendChild(paragraph)
 }
 
 function buttonMonsterSelect() {
@@ -62,7 +87,7 @@ function buttonMonsterSelect() {
     } else if(inputBarbacha.checked){
         spanMonsterPlayer.innerHTML = 'Barbacha'    
     } else {
-        alert('You need to select an option')    
+        createMessage('You need to select an option')    
     }
     MonsterEnemSelect()
 }
