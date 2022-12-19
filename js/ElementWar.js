@@ -1,6 +1,8 @@
 let playerAttack
 let enemyAttack
-let resultado
+let playerLives = 3
+let enemyLives = 3
+let result
 
 function playStart(){
     let buttonMonster = document.getElementById('Monster-button')
@@ -42,24 +44,43 @@ function enemyAttackAlea(){
     createMessage()
 }
 
-function combat(){    
+
+function combat(){ 
+    let spanPlayerLives = document.getElementById('player_lives')
+    let spanEnemyLives = document.getElementById('enemy_lives')   
     if (enemyAttack == playerAttack) {
-        resultado = ("Draw")
+        result = ("Draw")
     }else if (playerAttack == 'Fire' && enemyAttack == 'Earth'){
-        resultado = ("You're win!")
+        result = ("You're win!") 
+        enemyLives-- 
+        spanEnemyLives.innerHTML = enemyLives     
     }else if (playerAttack == 'Water' && enemyAttack == 'Fire'){
-        resultado = ("You're lose")        
+        result = ("You're lose")        
+        playerLives--  
+        spanPlayerLives.innerHTML = playerLives            
     }else if (playerAttack == 'Earth' && enemyAttack == 'Water'){
-        resultado = ("You're Win")
+        result = ("You're Win") 
+        enemyLives-- 
+        spanEnemyLives.innerHTML = enemyLives      
     } else{
-        resultado = ("You're lose")
-    }    
+        result = ("You're lose")
+        playerLives--
+        spanPlayerLives.innerHTML = playerLives        
+    }
+    remainingLives()   
+}
+function remainingLives(){
+    if (playerLives == 0){
+        alert("You are the loser!") 
+    } else if (enemyLives == 0){
+        alert("You are the Champion!!")
+    }
 }
 
 function createMessage(){
     let sectionMessages = document.getElementById('Message')
     let paragraph = document.createElement('p')
-    paragraph.innerHTML = 'Your Monster attacked with ' + playerAttack  + ' The enemy Monster  attacked with ' + enemyAttack + '-' + resultado
+    paragraph.innerHTML = 'Your Monster attacked with ' + playerAttack  + ' The enemy Monster  attacked with ' + enemyAttack + '-' + result
 
     sectionMessages.appendChild(paragraph)
 }
