@@ -4,6 +4,7 @@ let playerLives = 3
 let enemyLives = 3
 let result
 
+
 function playStart(){
     let buttonMonster = document.getElementById('Monster-button')
     buttonMonster.addEventListener('click', buttonMonsterSelect)
@@ -13,8 +14,12 @@ function playStart(){
     let button_water = document.getElementById('Water-button')
     button_water.addEventListener('click', attackWater)
     let button_earth = document.getElementById('Earth-button')
-    button_earth.addEventListener('click', attackEarth)    
+    button_earth.addEventListener('click', attackEarth) 
+    
+    let restartbutton = document.getElementById('Restart-button')
+    restartbutton.addEventListener('click', playRestart)
 }
+
 window.addEventListener('load', playStart)
 function attackFire(){
     playerAttack = 'Fire'
@@ -69,12 +74,13 @@ function combat(){
     }
     remainingLives()   
 }
+
 function remainingLives(){
     if (playerLives == 0){
-        alert("You are the loser!") 
+        createFinalMessage("maybe next time, loser!!!")       
     } else if (enemyLives == 0){
-        alert("You are the Champion!!")
-    }
+        createFinalMessage("Congratulations you win!!")        
+    }    
 }
 
 function createMessage(){
@@ -84,6 +90,27 @@ function createMessage(){
 
     sectionMessages.appendChild(paragraph)
 }
+
+function playRestart(){
+    location.reload()
+}
+
+function createFinalMessage(finalResult){
+    let sectionMessages = document.getElementById('Message')
+    let paragraph = document.createElement('p')
+    paragraph.innerHTML = finalResult
+
+    sectionMessages.appendChild(paragraph)
+
+    let button_fire = document.getElementById('Fire-button')
+    button_fire.disabled = true
+    let button_water = document.getElementById('Water-button')
+    button_water.disabled = true
+    let button_earth = document.getElementById('Earth-button')
+    button_earth.disabled = true
+}
+
+
 
 function buttonMonsterSelect() {
     
@@ -131,6 +158,7 @@ function MonsterEnemSelect(){
         spanMonsterOpponent.innerHTML = 'Barbacha'    
     }
 }
+
 function aleatorio(min, max){
     return Math.floor(Math.random() * (max - min) + min)
 }    
