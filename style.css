@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+body {
+    font-family: 'Fredoka One', cursive;
+    background-color: #2471A3 ;
+}
+.title {
+    color: white;
+    font-size: 40px;      
+}
+
+.subtitle {
+    color:white;
+    font-size: 28px;
+}
+
+#Pet_selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Monster-card {
+    width: 160px;
+    height: 110px;
+    background: #27AE60  ;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 3px solid #A569BD;
+    border-radius: 10px; 
+    display: flex; 
+    color: white;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;  
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}
+
+input{
+    display: none;
+}
+button {
+    width: 150px;
+    height: 50px;
+    background: transparent ;
+    border: 3px solid #A569BD;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 3px;
+    cursor: pointer;
+    color: white;font-size: large;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+}
+.Attack_selection {
+    display: flex;
+}

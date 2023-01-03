@@ -6,6 +6,12 @@ let result
 
 
 function playStart(){
+    let sectionRestartSelection = document.getElementById('Restart')
+    sectionRestartSelection.style.display = 'none'
+
+    let sectionAttackSelection = document.getElementById('Attack_selection')
+    sectionAttackSelection.style.display = 'none'
+    
     let buttonMonster = document.getElementById('Monster-button')
     buttonMonster.addEventListener('click', buttonMonsterSelect)
     
@@ -108,12 +114,21 @@ function createFinalMessage(finalResult){
     button_water.disabled = true
     let button_earth = document.getElementById('Earth-button')
     button_earth.disabled = true
+
+    let sectionRestartSelection = document.getElementById('Restart')
+    sectionRestartSelection.style.display = 'block'
 }
 
 
 
 function buttonMonsterSelect() {
+
+    let sectionMonsterSelection = document.getElementById('Pet_selection')
+    sectionMonsterSelection.style.display = 'none'
     
+    let sectionAttackSelection = document.getElementById('Attack_selection')
+    sectionAttackSelection.style.display = 'block'
+
     let inputTaquito = document.getElementById('Taquito')
     let inputChesquito = document.getElementById('Chesquito')
     let inputVampirin = document.getElementById('Vampirin')
