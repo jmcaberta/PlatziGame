@@ -17,59 +17,59 @@
         <div class="cards">
             <label class="Monster-card" for="Taquito">
                 <p>Taquito</p>
-                <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="">
+                <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="Taquito">
             </label>
             <input type="radio" id="Taquito" name="monster"/>
 
             <label class="Monster-card" for="Chesquito">
                 <p>Chesquito</p>
-                <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="">
+                <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Chesquito">
             </label>
             <input type="radio" id="Chesquito" name="monster"/>
 
             <label class="Monster-card" for="Barbacha">
                 <p>Barbacha</p>
-                <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="">
+                <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="Barbacha">
             </label>
             <input type="radio" id="Barbacha" name="monster"/>
 
             <label class="Monster-card" for="Vampirin">
                 <p>Vampirin</p> 
-                <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="">
+                <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="Vampirin">
             </label>
             <input type="radio" id="Vampirin" name="monster"/>
 
             <label class="Monster-card" for="Garguis">
                 <p>Garguis</p>
-                <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="">
+                <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Garguis">
             </label>
             <input type="radio" id="Garguis" name="monster"/>
 
             <label class="Monster-card" for="Esquitin">
                 <p>Esquitin</p>
-                <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt=""> 
+                <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="Esquitin"> 
             </label>
             <input type="radio" id="Esquitin" name="monster"/> 
-        </div>
-               
+        </div>               
         <br>
         <br>
         <button class="Monster-button">Select</button>
     </section>
 
     <section id="Attack_selection">
-        <h1 class="title"> Element War 🔥 💧 🌳 </h1>
+        <h1 class="title"> Monster element war </h1>
  
         <h2 class="subtitle">Choose your Attack</h2>
-        <div>
+        <div class="attack_button">
             <button id="Fire-button">Fire 🔥</button>
             <button id="Water-button">Water 💧</button>
             <button id="Earth-button">Earth 🌳</button>
         </div>
 
         <div>
-            <section id="Message">                 
-            </section>
+            <section id="Message">
+                <p id="result">Good look!</p>   
+            </section>                    
          
             <secction id="Restart">
                 <button id="Restart-button">Restart</button>
@@ -77,6 +77,8 @@
         </div>
 
         <div>
+            <div id="playerAttack"></div>
+            <div id="enemyAttack"></div>
             <p>Your Monter <span id="monster-player"></span> has <span id="player_lives">3</span> lives</p>
             <p>Your opponent's Monster <span id="monster-opponent"></span> has <span id="enemy_lives">3</span> lives</p>
         </div>     

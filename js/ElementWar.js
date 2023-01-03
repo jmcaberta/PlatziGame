@@ -17,8 +17,10 @@ function playStart(){
     
     let button_fire = document.getElementById('Fire-button')
     button_fire.addEventListener('click', attackFire)
+
     let button_water = document.getElementById('Water-button')
     button_water.addEventListener('click', attackWater)
+
     let button_earth = document.getElementById('Earth-button')
     button_earth.addEventListener('click', attackEarth) 
     
@@ -90,11 +92,26 @@ function remainingLives(){
 }
 
 function createMessage(){
-    let sectionMessages = document.getElementById('Message')
-    let paragraph = document.createElement('p')
-    paragraph.innerHTML = 'Your Monster attacked with ' + playerAttack  + ' The enemy Monster  attacked with ' + enemyAttack + '-' + result
+    let sectionMessages = document.getElementById('result')
+    let sectionPlayerAttack = document.getElementById('playerAtack')
+    let sectionEnemyAttack = document.getElementById('enemyAttack')
 
-    sectionMessages.appendChild(paragraph)
+    let notification = document.createElement('p')
+    let newPlayerAttack = document.createElement('p')
+    let newEnemyAttack = document.createElement('p')
+
+    sectionMessages.innerHTML = result
+    newPlayerAttack.innerHTML = playerAttack
+    newEnemyAttack.innerHTML = enemyAttack
+
+    sectionMessages.appendChild(notification)
+    playerAttack.appendChild(newPlayerAttack)
+    enemyAttack.appendChild(newEnemyAttack)
+    
+   /*  let paragraph = document.createElement('p')
+    paragraph.innerHTML = 'Your Monster attacked with ' + playerAttack  + ' The enemy Monster  attacked with ' + enemyAttack + '-' + result */
+
+    /* sectionMessages.appendChild(paragraph) */
 }
 
 function playRestart(){

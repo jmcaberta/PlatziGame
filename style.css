@@ -46,7 +46,7 @@ img {
 input{
     display: none;
 }
-button {
+.Monster-button {
     width: 150px;
     height: 50px;
     background: transparent ;
@@ -64,5 +64,32 @@ button {
     display: flex;
 }
 .Attack_selection {
-    display: flex;
+    display: flex;   
 }
+ .attack_button {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: transparent;
+    width: 100px;
+    font-family: 'Fredoka One', cursive;    
+ }
+
+ #Messages {
+    width: 180px;
+    background: #BE2014;
+    border-color: #A569BD;
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ #Restart {
+    border: transparent;
+    color:  #2471A3 ;
+    border-radius: 10px;
+    border-color: #A569BD;
+ }
